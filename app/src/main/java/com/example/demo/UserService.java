@@ -1,6 +1,10 @@
 package com.example.demo;
 
-public interface UserService {
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.POST;
 
-   Call<LoginResponse> userLogin(@Body LoginRequest loginRequest)
+public interface UserService {
+@POST("authenticate/")
+Call<LoginResponse> userLogin(@Body LoginRequest loginRequest)
 }
